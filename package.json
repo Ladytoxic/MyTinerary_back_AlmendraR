@@ -1,0 +1,29 @@
+{
+  "name": "my_tinerary_back",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ladytoxic/MyTinerary_back_AlmendraR.git"
+  },
+  "author": "Almendra Romina R <almendraromina1@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ladytoxic/MyTinerary_back_AlmendraR/issues"
+  },
+  "homepage": "https://github.com/Ladytoxic/MyTinerary_back_AlmendraR#readme",
+  "description": ""
+}
