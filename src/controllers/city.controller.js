@@ -1,32 +1,30 @@
 import City from "../model/Cities.js";
+
 const controller = {
   // Devuelve todas las cuidades.
   getCities: async (req, res) => {
 
     let queries = {}
 
-    if (!req.query.name)
+    if (req.query.name) {
+      queries.name = req.query.name
+    }
 
-      try {
-        const cities = await City.find(queries)
+    try {
+      const cities = await City.find(queries)
 
-        return res.status(200).json({
-          success: true,
-          cities
-        })
+      return res.status(200).json({
+        success: true,
+        cities
+      })
 
-      } catch (error) {
-        console.log(error);
-        return res.status(500).json({
-          success: false,
-          message: 'error server'
-        });
-      }
-  },
-
-  // Devuelve los detalles una sola cuidad pasandole el ID.
-  getCity: (req, res) => {
-    res.send('CityDefault');
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({
+        success: false,
+        message: 'Error getting the cities'
+      });
+    }
   },
 
   // Crea una cuidad pasandole los datos en el body de la petición.
@@ -40,7 +38,7 @@ const controller = {
     } catch (error) {
       return res.status(500).json({
         success: false,
-        message: 'error server'
+        message: 'Error creating city'
       })
     }
   },
