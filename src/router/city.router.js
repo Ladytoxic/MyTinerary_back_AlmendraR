@@ -5,6 +5,8 @@ const router = express.Router();
 
 router.get('/', cityController.getCities);
 
+router.get('/:id', cityController.getCityById);
+
 router.post('/', cityController.postCity);
 
 router.delete('/', cityController.deleteCity);
