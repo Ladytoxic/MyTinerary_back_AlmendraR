@@ -1,7 +1,7 @@
 import City from "../model/Cities.js";
 
 const controller = {
-  // Devuelve todas las cuidades.
+  // Filtra de todas las cuidades las queries // Devuelve todas las cuidades.
   getCities: async (req, res) => {
 
     let queries = {}
@@ -47,13 +47,13 @@ const controller = {
       }
       return res.status(404).json({
         success: false,
-        message: 'No se encontro el id'
+        message: 'Id not found'
       })
 
     } catch (error) {
       return res.status(500).json({
         success: false,
-        message: 'Id not found'
+        message: 'Failed to get city'
       })
     }
   },
