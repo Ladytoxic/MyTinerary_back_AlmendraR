@@ -4,7 +4,7 @@ const collection = 'users';
 
 const schema = new Schema({
     name: { type: String, require: true },
-    country: { type: String, require: true },
+    email: { type: String, require: true },
     description: { type: String, require: false },
     image: { type: String, require: false }
 },
@@ -12,6 +12,6 @@ const schema = new Schema({
         timestamps: true
     });
 
-const user = model(collection, schema);
+const User = model(collection, schema);
 
-export default user;
+export default User;

@@ -14,7 +14,7 @@ const controller = {
     }
 
     try {
-      const cities = await City.find(queries);
+      const cities = await City.find(queries).populate('user');
       if (cities.length > 0) {
         return res.status(200).json({
           success: true,
@@ -75,13 +75,37 @@ const controller = {
   },
 
   // Elimina una sola cuidad pasandole el ID.
-  deleteCity: (req, res) => {
-    res.send('Delete city');
+  deleteCity: async (req, res) => {
+    try {
+      await City.deleteOne({ _id: req.params.id })
+
+      return res.status(200).json({
+        success: true,
+        message: 'Delete City'
+      })
+    } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: 'Error delete city'
+      })
+    }
   },
 
   // Modifica una sola cuidad pasandole el ID y los parametros a modificar.
-  putCity: (req, res) => {
-    res.send('Update city');
+  updateCity: async (req, res) => {
+    try {
+      await City.updateOne({ _id: req.params.id }, req.body)
+
+      return res.status(200).json({
+        success: true,
+        message: 'Update City'
+      })
+    } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: 'Error update city'
+      })
+    }
   }
 }
 

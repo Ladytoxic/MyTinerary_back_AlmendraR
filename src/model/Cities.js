@@ -7,7 +7,7 @@ const schema = new Schema({
     country: { type: String, require: true },
     description: { type: String, require: false },
     image: { type: String, require: false },
-    // user: { type: Types.ObjectId, ref: 'users'}
+    user: { type: Types.ObjectId, ref: 'users' }
 },
     {
         timestamps: true
