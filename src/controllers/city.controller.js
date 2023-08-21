@@ -1,6 +1,25 @@
 import City from "../model/Cities.js";
 
 const controller = {
+
+  // CREATE
+  // Crea una cuidad pasandole los datos en el body de la petición.
+  postCity: async (req, res) => {
+    try {
+      const newCity = await City.create(req.body)
+      return res.status(201).json({
+        success: true,
+        message: 'City created'
+      })
+    } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: 'Error creating city'
+      })
+    }
+  },
+ 
+  // READ
   // Filtra de todas las cuidades las queries // Devuelve todas las cuidades.
   getCities: async (req, res) => {
 
@@ -58,22 +77,25 @@ const controller = {
     }
   },
 
-  // Crea una cuidad pasandole los datos en el body de la petición.
-  postCity: async (req, res) => {
+  // UPDATE
+  // Modifica una sola cuidad pasandole el ID y los parametros a modificar.
+  updateCity: async (req, res) => {
     try {
-      const newCity = await City.create(req.body)
-      return res.status(201).json({
+      await City.updateOne({ _id: req.params.id }, req.body)
+
+      return res.status(200).json({
         success: true,
-        message: 'City created'
+        message: 'Update City'
       })
     } catch (error) {
       return res.status(500).json({
         success: false,
-        message: 'Error creating city'
+        message: 'Error update city'
       })
     }
   },
-
+   
+  // DELETE
   // Elimina una sola cuidad pasandole el ID.
   deleteCity: async (req, res) => {
     try {
@@ -91,22 +113,7 @@ const controller = {
     }
   },
 
-  // Modifica una sola cuidad pasandole el ID y los parametros a modificar.
-  updateCity: async (req, res) => {
-    try {
-      await City.updateOne({ _id: req.params.id }, req.body)
 
-      return res.status(200).json({
-        success: true,
-        message: 'Update City'
-      })
-    } catch (error) {
-      return res.status(500).json({
-        success: false,
-        message: 'Error update city'
-      })
-    }
-  }
 }
 
 export default controller;
