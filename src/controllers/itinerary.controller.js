@@ -18,7 +18,7 @@ const controller = {
       })
     }
   },
- 
+
   // READ
   // Filtra de todas los itinerario las queries // Devuelve todas las cuidades.
   getItineraries: async (req, res) => {
@@ -28,14 +28,14 @@ const controller = {
     if (req.query.name) {
       queries.name = new RegExp(`^${req.query.name}`, 'i');
     }
- 
+
 
     try {
       const itineraries = await Itinerary.find(queries).populate('user').populate('city');
-      if (cities.length > 0) {
+      if (itineraries.length > 0) {
         return res.status(200).json({
           success: true,
-          cities
+          itineraries
         })
       }
       return res.status(404).json({
@@ -92,7 +92,7 @@ const controller = {
       })
     }
   },
-   
+
   // DELETE
   // Elimina un solo itinerario pasandole el ID.
   deleteItinerary: async (req, res) => {

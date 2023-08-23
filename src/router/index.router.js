@@ -11,6 +11,6 @@ router.get('/', (req, res) => {
 
 router.use('/cities', cityRouter);
 router.use('/users', userRouter);
-router.use('/itinerary', itineraryRouter);
+router.use('/itineraries', itineraryRouter);
 
 export default router;
