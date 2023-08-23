@@ -10,7 +10,9 @@ router.get('/', (req, res) => {
 });
 
 router.use('/cities', cityRouter);
+
 router.use('/users', userRouter);
+
 router.use('/itineraries', itineraryRouter);
 
 export default router;
