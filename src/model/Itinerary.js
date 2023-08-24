@@ -7,10 +7,10 @@ const schema = new Schema({
     image: { type: String, require: false },
     duration: { type: String, require: true },
     price: { type: Number, require: true },
-    hashtag: [{ type: String, require: false }],
-    currency: { type: String, require: false },
-    user: { type: Types.ObjectId, ref: 'users' },
-    city: { type: Types.ObjectId, ref: 'cities' }
+    hashtags: [{ type: String, require: false }],
+    likes: { type: Number, require: false },
+    user: { type: Types.ObjectId, ref: 'users', require: true },
+    city: { type: Types.ObjectId, ref: 'cities', require: true }
 },
     {
         timestamps: true
