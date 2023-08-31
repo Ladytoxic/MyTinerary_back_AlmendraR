@@ -16,6 +16,6 @@ router.use('/users', userRouter);
 
 router.use('/itineraries', itineraryRouter);
 
-router.use('/ativities', activityRouter);
+router.use('/activities', activityRouter);
 
 export default router;

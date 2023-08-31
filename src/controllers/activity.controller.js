@@ -46,7 +46,7 @@ const controller = {
       console.log(error);
       return res.status(500).json({
         success: false,
-        message: 'Error getting the itineraries'
+        message: 'Error getting the activities'
       })
     }
   },

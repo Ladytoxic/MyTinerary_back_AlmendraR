@@ -41,7 +41,7 @@ const controller = {
       }
       return res.status(404).json({
         success: false,
-        message: 'No itinerary found'
+        message: 'No itineraries found'
       })
 
     } catch (error) {
