@@ -1,27 +1,26 @@
-import Itinerary from "../model/Itinerary.js";
-
+import Activity from '../model/activities.js'
 const controller = {
 
   // CREATE
-  // Crea un itinerario pasandole los datos en el body de la petición.
-  postItinerary: async (req, res) => {
+  // Crea una actividad pasandole los datos en el body de la petición.
+  postActivity: async (req, res) => {
     try {
-      const newItinerary = await Itinerary.create(req.body)
+      const newActivity = await Activity.create(req.body)
       return res.status(201).json({
         success: true,
-        message: 'Itinerary created'
+        message: 'Activity created'
       })
     } catch (error) {
       return res.status(500).json({
         success: false,
-        message: 'Error creating Itinerary'
+        message: 'Error creating Activity'
       })
     }
   },
 
   // READ
-  // Filtra de todas los itinerario las queries // Devuelve todas las cuidades.
-  getItineraries: async (req, res) => {
+  // Filtra de todas las actividades las queries // Devuelve todas las cuidades.
+  getActivities: async (req, res) => {
 
     let queries = {}
 
@@ -31,8 +30,7 @@ const controller = {
 
 
     try {
-      const itineraries = await Itinerary.find(queries)
-        .populate('activities', 'name');
+      const Activities = await Activity.find(queries)
       if (itineraries.length > 0) {
         return res.status(200).json({
           success: true,
@@ -41,7 +39,7 @@ const controller = {
       }
       return res.status(404).json({
         success: false,
-        message: 'No itinerary found'
+        message: 'No Activity found'
       })
 
     } catch (error) {
@@ -53,17 +51,17 @@ const controller = {
     }
   },
 
-  // Devuelve un itinerario por el ID
-  getItineraryById: async (req, res) => {
+  // Devuelve una actividad por el ID
+  getActivityById: async (req, res) => {
     try {
-      const oneItinerary = await Itinerary.findById(req.params.id)
+      const oneActivity = await Activity.findById(req.params.id)
         .populate('user', 'name image')
         .populate('activities', 'name image description')
         .populate('city', 'name country');
-      if (oneItinerary) {
+      if (oneActivity) {
         return res.status(200).json({
           success: true,
-          Itinerary: oneItinerary
+          Activity: oneActivity
         })
       }
       return res.status(404).json({
@@ -74,43 +72,43 @@ const controller = {
     } catch (error) {
       return res.status(500).json({
         success: false,
-        message: 'Failed to get itinerary'
+        message: 'Failed to get Activity'
       })
     }
   },
 
   // UPDATE
-  // Modifica un solo itinerario pasandole el ID y los parametros a modificar.
-  updateItinerary: async (req, res) => {
+  // Modifica una sola actividad pasandole el ID y los parametros a modificar.
+  updateActivity: async (req, res) => {
     try {
-      await Itinerary.updateOne({ _id: req.params.id }, req.body)
+      await Activity.updateOne({ _id: req.params.id }, req.body)
 
       return res.status(200).json({
         success: true,
-        message: 'Update itinerary'
+        message: 'Update Activity'
       })
     } catch (error) {
       return res.status(500).json({
         success: false,
-        message: 'Error update itinerary'
+        message: 'Error update Activity'
       })
     }
   },
 
   // DELETE
-  // Elimina un solo itinerario pasandole el ID.
-  deleteItinerary: async (req, res) => {
+  // Elimina una sola actividad pasandole el ID.
+  deleteActivity: async (req, res) => {
     try {
-      await Itinerary.deleteOne({ _id: req.params.id })
+      await Activity.deleteOne({ _id: req.params.id })
 
       return res.status(200).json({
         success: true,
-        message: 'Delete itinerary'
+        message: 'Delete Activity'
       })
     } catch (error) {
       return res.status(500).json({
         success: false,
-        message: 'Error delete itinerary'
+        message: 'Error delete Activity'
       })
     }
   },
