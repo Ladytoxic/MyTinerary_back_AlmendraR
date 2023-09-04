@@ -32,7 +32,7 @@ const controller = {
 
     try {
       const itineraries = await Itinerary.find(queries)
-        .populate('activities', 'name');
+        .populate('user');
       if (itineraries.length > 0) {
         return res.status(200).json({
           success: true,

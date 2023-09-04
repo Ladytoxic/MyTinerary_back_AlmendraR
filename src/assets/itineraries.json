@@ -1,18 +1,49 @@
 {
-    "name": "",
-    "image": "",
-    "duration": "",
-    "price": "",
-    "hashtags": "",
-    "user": "",
-    "city": "",
-    "activities": [
-        {
-            "name": "",
-            "image": "",
-            "description": ""
-        }
-    ],
-    "likes": "",
-    "comments": []
-}
+    "success": true,
+    "itineraries": [
+      {
+        "user": {
+          "name": "Élise Dupont",
+          "image": "https://i.postimg.cc/7ZBKxytg/Elite-Dupont.jpg"
+        },
+        "_id": "64f4f35ab95edc9e69ee4c3b",
+        "name": "Morning Exploration",
+        "description": "Embark on a morning exploration of Paris. Begin with an authentic Parisian breakfast in a local café, then delve into art at the Louvre Museum. Enjoy a leisurely stroll in the beautiful Tuileries Gardens and learn about history at Place de la Concorde. Wrap up your morning with shopping along the elegant Champs-Élysées.",
+        "image": "",
+        "duration": 4.5,
+        "price": 3,
+        "hashtags": [
+          "ParisianBreakfast",
+          "LouvreArtParis",
+          "ChampsElyseesShopping"
+        ],
+        "city": "64df71b05efbae86185afc18",
+        "likes": 0,
+        "createdAt": "2023-09-03T20:58:02.504Z",
+        "updatedAt": "2023-09-03T22:55:20.171Z",
+        "__v": 0
+      },
+      {
+        "user": {
+          "name": "Olivier Martin",
+          "image": "https://i.postimg.cc/8cDRRynp/Oliver-Martin.jpg"
+        },
+        "_id": "64f4f366b95edc9e69ee4c3d",
+        "name": "Parisian Charm in Half a Day",
+        "description": "Explore the highlights of Paris in just half a day. Start with breathtaking views from the Eiffel Tower, followed by a relaxing Seine River cruise to admire the city's iconic landmarks. Dive into the bohemian atmosphere of Montmartre, visit the iconic Sacré-Cœur Basilica, and soak in panoramic vistas.",
+        "image": "",
+        "duration": 4,
+        "price": 3,
+        "hashtags": [
+          "ParisEiffelViews",
+          "SeineCruiseParis",
+          "MagicalMontmartre"
+        ],
+        "city": "64df71b05efbae86185afc18",
+        "likes": 0,
+        "createdAt": "2023-09-03T20:58:14.381Z",
+        "updatedAt": "2023-09-03T22:56:52.428Z",
+        "__v": 0
+      }
+    ]
+  }
