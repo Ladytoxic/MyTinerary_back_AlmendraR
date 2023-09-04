@@ -1,0 +1,182 @@
+[
+    {
+        "_id": "64f105c49f3e9e8a572ba837",
+        "name": "Olivier Martin",
+        "email": "olivier.martin.tours@gmail.com",
+        "image": "https://i.postimg.cc/8cDRRynp/Oliver-Martin.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba836",
+        "name": "Élise Dupont",
+        "email": "elise.dupont.guidetours@gmail.com",
+        "image": "https://i.postimg.cc/7ZBKxytg/Elite-Dupont.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba838",
+        "name": "Sophie Dubois",
+        "email": "sophie.dubois.guides@gmail.com",
+        "image": "https://i.postimg.cc/VLf95VC4/Sophie-Dubois.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba83b",
+        "name": "Pablo Sánchez",
+        "email": "pablo.sanchez.tours@gmail.com",
+        "image": "https://i.postimg.cc/05ddksbb/Pablo-Sanchez.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba83c",
+        "name": "Anna Müller",
+        "email": "anna.muller.guides@gmail.com",
+        "image": "https://i.postimg.cc/FK8GLV4z/Anna-Muller.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba83d",
+        "name": "Isabella Bianchi",
+        "email": "isabella.bianchi.tours@gmail.com",
+        "image": "https://i.postimg.cc/vZmv2N8D/Isabella-Bianchi.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba83e",
+        "name": "Henri Leclerc",
+        "email": "henri.leclerc.guidage@gmail.com",
+        "image": "https://i.postimg.cc/05pZzSH5/Henri-Leclerc.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba83f",
+        "name": "Marta Costa",
+        "email": "marta.costa.guiding@gmail.com",
+        "image": "https://i.postimg.cc/s2k9XfYZ/Marta-Costa.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba840",
+        "name": "Sebastian Klein",
+        "email": "sebastian.klein.tours@gmail.com",
+        "image": "https://i.postimg.cc/ZncrVr1r/Sebastian-Klein.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba842",
+        "name": "Maria Santos",
+        "email": "maria.santos.tours@gmail.com",
+        "image": "https://i.postimg.cc/wT2VVppS/Maria-Santos.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba841",
+        "name": "Camille Lefebvre",
+        "email": "camille.lefebvre.guides@gmail.com",
+        "image": "https://i.postimg.cc/fLdCjSzK/Camille-Lefabrvre.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba843",
+        "name": "Andrei Popov",
+        "email": "andrei.popov.guiding@gmail.com",
+        "image": "https://i.postimg.cc/yxzPf6Wz/Andrei-Popov.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba844",
+        "name": "Luisa Ferrari",
+        "email": "luisa.ferrari.tours@gmail.com",
+        "image": "https://i.postimg.cc/Dyn6Lztr/Luisa-Ferrari.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba845",
+        "name": "François Dupont",
+        "email": "francois.dupont.guides@gmail.com",
+        "image": "https://i.postimg.cc/BnZh9vpS/Francois-Dupont.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba846",
+        "name": "Giovanni Russo",
+        "email": "giovanni.russo.tours@gmail.com",
+        "image": "https://i.postimg.cc/xT3s4mKp/Giovanni-Russo.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba847",
+        "name": "Nina Ivanova",
+        "email": "nina.ivanova.guiding@gmail.com",
+        "image": "https://i.postimg.cc/G2vPs0Kg/Nina-Ivanova.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba848",
+        "name": "Elena Gomez",
+        "email": "elena.gomez.tours@gmail.com",
+        "image": "https://i.postimg.cc/rwYNBNzj/Elena-Gomez.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba849",
+        "name": "Hans Weber",
+        "email": "hans.weber.guides@gmail.com",
+        "image": "https://i.postimg.cc/sx9JbFZG/Hans-Weber.jpg",
+        "createdAt": "2023-08-31T21:27:32.399Z",
+        "updatedAt": "2023-08-31T21:27:32.399Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba83a",
+        "name": "Elena Petrov",
+        "email": "elena.petrov.guiding@gmail.com",
+        "image": "https://i.postimg.cc/QMH0Cnvv/Elena-Petrov.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    },
+    {
+        "_id": "64f105c49f3e9e8a572ba839",
+        "name": "Luca Rossi",
+        "email": "luca.rossi.tours@gmail.com",
+        "image": "https://i.postimg.cc/1znrsVqQ/Luca-Rossi.jpg",
+        "createdAt": "2023-08-31T21:27:32.398Z",
+        "updatedAt": "2023-08-31T21:27:32.398Z",
+        "__v": 0
+    }
+]

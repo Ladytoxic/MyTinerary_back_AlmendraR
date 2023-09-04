@@ -28,7 +28,8 @@ const controllers = {
         }
 
         try {
-            const users = await User.find(queries);
+            const users = await User.find(queries)
+                .populate('itineraries');
             if (users.length > 0) {
                 return res.status(200).json({
                     success: true,
@@ -52,7 +53,10 @@ const controllers = {
     // Obtener une usuarie por el ID
     getUser: async (req, res) => {
         try {
-            const oneUser = await User.findById(req.params.id);
+            const oneUser = await User.findById(req.params.id)
+                .populate('itineraries')
+                .populate('activities')
+                .populate('comments');
             if (oneUser) {
                 return res.status(200).json({
                     success: true,
