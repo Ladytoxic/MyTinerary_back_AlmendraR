@@ -21,9 +21,7 @@ const controller = {
   // READ
   // Filtra de todas las actividades las queries // Devuelve todas las cuidades.
   getActivities: async (req, res) => {
-
-    let queries = {}
-
+    let queries = {} 
     if (req.query.name) {
       queries.name = new RegExp(`^${req.query.name}`, 'i');
     }
