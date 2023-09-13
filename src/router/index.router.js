@@ -7,10 +7,6 @@ import authRouter from "./auth.router.js"
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('Hola Mundo');
-});
-
 router.use('/users', userRouter);
 
 router.use('/auth', authRouter);

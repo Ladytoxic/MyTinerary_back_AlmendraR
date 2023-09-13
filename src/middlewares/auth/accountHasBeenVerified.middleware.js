@@ -5,6 +5,6 @@ export const accountHasBeenVerified = (req, res, next) => {
 
     res.status(400).json({
         success: true,
-        message: 'El usuario no verifico su cuenta'
+        message: 'unverified user account'
     })
 }

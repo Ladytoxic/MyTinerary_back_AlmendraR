@@ -1,13 +1,13 @@
 import Joi from 'joi';
 
-export const createUserSchema = Joi.object({
+export const userSignUp = Joi.object({
     email: Joi.string()
         .required()
         .email({
             minDomainSegments: 2
         })
         .messages({
-            'any.required': 'El email es requerido'
+            'any.required': 'Email is required'
         }),
     password: Joi.string()
         .required()

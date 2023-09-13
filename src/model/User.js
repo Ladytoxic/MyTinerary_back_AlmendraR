@@ -8,6 +8,8 @@ const schema = new Schema({
     name: { type: String, require: true },
     description: { type: String, require: false },
     image: { type: String, require: false },
+    country: {type: String, require: false},
+    google: {type: Boolean, default: false},
     online: { type: Boolean, default: false },
     verified: { type: Boolean, default: true },
     verified_code: { type: String },

@@ -2,6 +2,7 @@ import crypto from 'crypto';
 import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import User from '../model/User.js';
+import { verify } from '../helpers/google-verify.js';
 
 const authController = {
 
@@ -14,12 +15,12 @@ const authController = {
 
             return res.status(201).json({
                 success: true,
-                message: 'Usuario registrado!'
+                message: 'Registered user!'
             })
         } catch (error) {
             res.status(500).json({
                 success: false,
-                message: 'Error al registrar el usuario'
+                message: 'Error registering user'
             })
         }
     },
@@ -37,7 +38,7 @@ const authController = {
                     id: user._id,
                     email: user.email,
                     name: user.name,
-                    image: user.photo
+                    image: user.image
                 },
                 process.env.SECRET_TOKEN,
                 { expiresIn: '10h' }
@@ -47,7 +48,59 @@ const authController = {
 
             return res.status(200).json({
                 success: true,
-                message: 'Usuario logueado correctamente',
+                message: 'User logged in successfully',
+                response: {
+                    token,
+                    user: {
+                        name: user.name,
+                        email: user.email,
+                        image: user.image
+                    },
+                }
+            })
+
+        } catch (error) {
+            res.status(500).json({
+                success: false,
+                message: 'Error authenticating user'
+            })
+        }
+    },
+    googleSignin: async (req, res, next) => {
+        const { token_id } = req.body;
+
+        try {
+            const { name, email, photo } = await verify(token_id);
+            let user = await User.findOne({ email });
+            if (!user) {
+                const data = {
+                    name,
+                    email,
+                    photo,
+                    password: bcryptjs.hashSync(process.env.STANDARD_PASS, 10),
+                    google: true,
+                    verified_code: crypto.randomBytes(10).toString('hex')
+                }
+
+                user = await User.create(data)
+            }
+            user.online = true;
+            await user.save()
+
+            const token = jwt.sign(
+                {
+                    id: user._id,
+                    email: user.email,
+                    name: user.name,
+                    image: user.photo
+                },
+                process.env.SECRET_TOKEN,
+                { expiresIn: '10h' }
+            )
+
+            res.status(200).json({
+                success: true,
+                message: 'User logged in successfully Google',
                 response: {
                     token,
                     user: {
@@ -61,11 +114,11 @@ const authController = {
         } catch (error) {
             res.status(500).json({
                 success: false,
-                message: 'Error al autenticar el usuario'
+                message: 'Error authenticating user'
             })
         }
     },
-    
+
     signout: async (req, res, next) => {
         try {
             const user = await User.findOneAndUpdate(
@@ -76,12 +129,12 @@ const authController = {
 
             return res.status(200).json({
                 success: true,
-                message: 'Usuario deslogueado'
+                message: 'User disconnected'
             })
         } catch (error) {
             res.status(500).json({
                 success: false,
-                message: 'Error al autenticar el usuario'
+                message: 'Error authenticating user'
             })
         }
     }
